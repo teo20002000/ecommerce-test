@@ -30,10 +30,10 @@ async function login({user, setUser}: LoginInterface) {
             })
         const json= await data.json()
         console.log(json)
-        if(!json.token) {
+        if(!json.accessToken) {
             throw new Error("Autenticazione errata")
         }
-        setUser({username, password, token: json.token, logged: true})
+        setUser({username, password, token: json.accessToken, logged: true})
     } catch (error) {
         const errorMessage = ( error as Error).message
         setUser( (user:User) => ({...user, error: errorMessage}))
