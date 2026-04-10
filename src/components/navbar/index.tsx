@@ -77,7 +77,7 @@ function NavBar({setDrawerOpen, setSearch}: Props) {
                 marginLeft: {xs:"50px",md:"0"}
             }} >Musa eCommerce </Typography>
             </Link>
-            { user && <Button onClick={handleLogout} className="menuButton">
+            { user?.logged && <Button onClick={handleLogout} className="menuButton">
                 <Logout />
             </Button> }
         

@@ -66,7 +66,7 @@ function ProductCard({ product, setCartItem }: Props) {
                             <Button onClick={() => setCartItem(product)} disabled={!user?.logged}> 
                                 <ShoppingBasket color={user?.logged ? "primary " : "disabled"} sx={{marginRight:"4px"}}/> Aggiungi
                                 </Button>
-                            
+                            <Typography>{price} €</Typography>
                             </CardActions> 
                         
                     </MEFCard>
